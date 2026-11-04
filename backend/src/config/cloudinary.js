@@ -1,0 +1,18 @@
+import { v2 as cloudinary } from 'cloudinary';
+
+export const isCloudinaryConfigured = () =>
+  Boolean(process.env.CLOUDINARY_CLOUD_NAME && process.env.CLOUDINARY_API_KEY && process.env.CLOUDINARY_API_SECRET);
+
+// Reads the CLOUDINARY_* variables from .env. Returns false when they are missing.
+export const configureCloudinary = () => {
+  if (!isCloudinaryConfigured()) return false;
+  cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+    secure: true,
+  });
+  return true;
+};
+
+export default cloudinary;

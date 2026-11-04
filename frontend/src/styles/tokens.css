@@ -1,0 +1,129 @@
+/* ==========================================================
+   LuxuryStay design tokens — "Off-White, Warm Beige & Luxury Brown"
+   60% Off-White (#F7F3ED) backgrounds
+   25% Warm Beige (#B69A7D) accents and borders
+   15% Luxury Brown (#6B4F3A) buttons and navigation
+   Light mode is the default; [data-theme="dark"] switches it.
+   The espresso "night" colours stay dark in both modes (sidebar, hero, feature bands).
+   ========================================================== */
+:root {
+  color-scheme: light;
+
+  /* Always-dark espresso surfaces */
+  --night: #2b1f17;
+  --night-2: #3a2a1f;
+  --night-3: #4e3a2b;
+  --on-night: #f7f3ed;
+  --on-night-muted: #cbb8a4;
+
+  /* Warm Beige — accents, highlights, borders */
+  --accent: #b69a7d;
+  --accent-strong: #9c7f62;
+  --accent-ink: #2b1f17;
+  --accent-soft: #f0e6da;
+
+  /* Page (Off-White) */
+  --bg: #f7f3ed;
+  --surface: #fffdf9;
+  --surface-2: #f2ebe2;
+  --ink: #2b1f17;
+  --ink-2: #5a4636;
+  --muted: #8a7564;
+  --line: #e7ddd0;
+  --line-strong: #d4c4b1;
+
+  /* Luxury Brown — links, active states, charts */
+  --primary: #6b4f3a;
+  --primary-strong: #523b2a;
+  --primary-soft: #efe4d8;
+  --on-primary: #ffffff;
+
+  /* Primary button = Luxury Brown */
+  --btn-bg: #6b4f3a;
+  --btn-fg: #ffffff;
+  --btn-hover: #523b2a;
+
+  --header-bg: rgba(247, 243, 237, 0.86);
+  --saffron: #c89b4a;     /* star ratings */
+  --seaglass: #f0e6da;
+  --deep-sea: var(--night);
+
+  /* Status tones — warm, muted versions so they sit well with brown */
+  --green: #4a7a50;  --green-bg: #e5efe2;
+  --blue: #4d6a8c;   --blue-bg: #e5ebf1;
+  --teal: #4c7a76;   --teal-bg: #e1eeec;
+  --amber: #96651f;  --amber-bg: #f6ead4;
+  --red: #a6463a;    --red-bg: #f6e2dd;
+  --grey: #6f6257;   --grey-bg: #eee7df;
+
+  /* Room status colours */
+  --st-available: #5b8c5f;
+  --st-reserved: #5e7fa3;
+  --st-occupied: #6b4f3a;
+  --st-cleaning: #c9963e;
+  --st-maintenance: #b5483b;
+
+  /* Type */
+  --font-display: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-xs: 0.76rem;
+  --fs-sm: 0.86rem;
+  --fs-base: 0.95rem;
+  --fs-md: 1.08rem;
+  --fs-lg: 1.3rem;
+  --fs-xl: 1.65rem;
+  --fs-2xl: 2.2rem;
+
+  /* Shape & depth (warm-tinted shadows) */
+  --r-sm: 8px;
+  --r: 10px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --shadow-soft: 0 1px 2px rgba(43, 31, 23, 0.06);
+  --shadow-card: 0 1px 2px rgba(43, 31, 23, 0.05), 0 8px 24px -12px rgba(43, 31, 23, 0.16);
+  --shadow-lift: 0 18px 40px -18px rgba(43, 31, 23, 0.38);
+  --shadow-pop: 0 24px 60px -12px rgba(30, 20, 13, 0.38);
+
+  --ease-out: cubic-bezier(0.2, 0.75, 0.2, 1);
+  --container: 1200px;
+  --sidebar-w: 256px;
+  --focus: 0 0 0 3px rgba(182, 154, 125, 0.5);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #17110c;
+  --surface: #211912;
+  --surface-2: #2a2018;
+  --ink: #f3ece3;
+  --ink-2: #cdbfaf;
+  --muted: #9c8b7a;
+  --line: #3a2d22;
+  --line-strong: #4d3d30;
+
+  --primary: #d2b596;
+  --primary-strong: #e6cfb6;
+  --primary-soft: #3a2b1f;
+  --on-primary: #17110c;
+
+  --btn-bg: #b69a7d;
+  --btn-fg: #1e150e;
+  --btn-hover: #c9af92;
+
+  --header-bg: rgba(23, 17, 12, 0.84);
+  --accent-soft: rgba(182, 154, 125, 0.16);
+  --seaglass: #2a2018;
+
+  --green: #93c497;  --green-bg: rgba(147, 196, 151, 0.13);
+  --blue: #a3bcd8;   --blue-bg: rgba(163, 188, 216, 0.13);
+  --teal: #92c7c1;   --teal-bg: rgba(146, 199, 193, 0.13);
+  --amber: #e3b56a;  --amber-bg: rgba(227, 181, 106, 0.14);
+  --red: #e8968a;    --red-bg: rgba(232, 150, 138, 0.13);
+  --grey: #b5a796;   --grey-bg: rgba(181, 167, 150, 0.12);
+
+  --st-occupied: #b69a7d;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px -14px rgba(0, 0, 0, 0.65);
+  --shadow-lift: 0 22px 44px -18px rgba(0, 0, 0, 0.8);
+}

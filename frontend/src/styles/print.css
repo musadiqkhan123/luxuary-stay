@@ -1,0 +1,13 @@
+/* Printable invoice: hide the app chrome and print only the document */
+@media print {
+  @page { margin: 14mm; }
+  :root { --surface: #fff; --surface-2: #f7f3ed; --ink: #2b1f17; --ink-2: #5a4636; --muted: #8a7564; --line: #e7ddd0; }
+  body { background: #fff; color: #2b1f17; }
+  .invoice, .panel { box-shadow: none !important; }
+  .sidebar, .topbar, .no-print, .toasts, .skip-link { display: none !important; }
+  .dash-main { margin-left: 0 !important; }
+  .dash-content { padding: 0 !important; max-width: none; }
+  .invoice { border: none; padding: 0; max-width: none; }
+  .badge { border: 1px solid currentColor; }
+  a { color: inherit; text-decoration: none; }
+}
